@@ -1,3 +1,5 @@
 # Config Linux
 
-Example
+https://www.youtube.com/watch?v=mHLwfI1nHHY
+
+https://pastebin.com/EEX1Dsuq
