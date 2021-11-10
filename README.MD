@@ -10,3 +10,7 @@ https://pastebin.com/EEX1Dsuq
 username:x:1634231:100:Your Name:/home/username:/bin/zsh
 ```
 
+## Enable laptop mode
+This mode is for activate the energy mode saving in the laptop and optimze its performance.
+https://askubuntu.com/questions/180712/how-to-enable-laptop-mode
+ 
