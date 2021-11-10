@@ -7,7 +7,7 @@
 sudo apt-get install -y cmake libfreetype6-dev libfontconfig1-dev xclip
 
 # Download, compile and install Alacritty
-git clone https://github.com/jwilm/alacritty
+git clone https://github.com/jwilm/alacritty ~/Descargas/
 cd alacritty
 cargo build --release
 
