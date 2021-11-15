@@ -12,13 +12,16 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a gnome-Terminal desktop='^2'
 #bspc rule -a mplayer2 state=floating
 #bspc rule -a Kupfer.py focus=on
 #bspc rule -a Sc manage=off
 
+
+#Rule to open Brave browser in the desktop 2
+bspc rule -a gnome-Terminal desktop='^2'
+
 #Load Wallpaper
-feh --bg-fill /home/gfrancv/Images/wallpaper.png
+feh --bg-fill ~/Images/wallpaper.png
 
 #Launch Polybar
 ~/.config/polybar/./launch.sh --hack
