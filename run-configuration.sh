@@ -19,9 +19,9 @@ apt instal l build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb
 echo "Creating the arrival folder."
 mkdir ~/Downloads
 echo "Cloning bspwm repo."
-git clone https://github.com/baskerville/bspwm.git ~/Downloads
+git clone https://github.com/baskerville/bspwm.git ~/Downloads/bspwm
 echo "Cloning sxhkd repo."
-git clone https://github.com/baskerville/sxhkd.git ~/Downloads
+git clone https://github.com/baskerville/sxhkd.git ~/Downloads/sxhkd
 
 echo "Making bspwm."
 cd ~/Downloads/bspwm
@@ -49,6 +49,33 @@ cp config-files/bspwmrc ~/.config/bspwm/
 echo "Copy sxhkd configs and required scripts."
 cp config-files/sxhkdrc ~/.config/sxhkd/
 cp config-files/scripts ~/.config/bspwm/
+
+
+#
+#Install polybar
+#
+echo "Installing the necessary files for polybar."
+sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev
+
+echo "Installing polybar"
+git clone --recursive https://github.com/polybar/polybar ~/Downloads/polybar
+mkdir ~/Downloads/polybar/build
+cd ~/Downloads/polybar/build
+cmake ..
+make -j$(nproc)
+sudo make install
+
+
+#
+#Install picom
+#
+echo "Installing picom"
+git clone https://github.com/ibhagwan/picom.git ~/Downloads/picom
+cd ~/Downloads/picom
+git submodule update --init --recursive
+meson --buildtype=release . build
+ninja -C build
+sudo ninja -C build install
 
 
 
