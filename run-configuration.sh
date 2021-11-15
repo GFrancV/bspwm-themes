@@ -77,6 +77,10 @@ meson --buildtype=release . build
 ninja -C build
 sudo ninja -C build install
 
+echo "Picom necessary files."
+mkdir ~/.config/picom
+cd $iniRoute
+cp config-files/picom.conf ~/.config/picom
 
 
 
