@@ -17,8 +17,9 @@ bspc config gapless_monocle      true
 #bspc rule -a Sc manage=off
 
 
-#Rule to open Brave browser in the desktop 2
+#Rule to open apps in specifics dektops
 bspc rule -a gnome-Terminal desktop='^2'
+bspc rule -a Code desktop='^4'
 
 #Load Wallpaper
 feh --bg-fill ~/Images/wallpaper-abstergo.png
