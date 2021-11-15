@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#Load the username in a local variable
+#Load the necessary a local variables
 usrName=$(whoami)
+iniRoute=$(pwd)
 
 echo "Starting the configuration!"
 
@@ -39,6 +40,15 @@ sudo apt install bspwm
 #Copy the necessary files
 #
 echo "Creating the config folders."
+mkdir ~/.config/bspwm
+mkdir ~/.config/sxhkd
+
+echo "Copy bspwm configs."
+cd $iniRoute
+cp config-files/bspwmrc ~/.config/bspwm/
+echo "Copy sxhkd configs and required scripts."
+cp config-files/sxhkdrc ~/.config/sxhkd/
+cp config-files/scripts ~/.config/bspwm/
 
 
 
