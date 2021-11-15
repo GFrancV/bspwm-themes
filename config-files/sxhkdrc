@@ -127,3 +127,4 @@ alt + super + {Left,Down,Up,Right}
 #Open Browser
 super + shift + b
 	brave-browser
+
