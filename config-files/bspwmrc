@@ -21,7 +21,7 @@ bspc config gapless_monocle      true
 bspc rule -a gnome-Terminal desktop='^2'
 
 #Load Wallpaper
-feh --bg-fill ~/Images/wallpaper.png
+feh --bg-fill ~/Images/wallpaper-abstergo.png
 
 #Launch Polybar
 ~/.config/polybar/./launch.sh --hack
