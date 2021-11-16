@@ -2,9 +2,14 @@
 
 ![Preview](/images/preview/Preview.png)
 
-
+## Install fonts
+/usr/local/share/fonts/fonts
+fc-cache -v
 
 ## Before the instalation
+### Rofi
+To personalize the apparience of rofi we need do this manualy.  
+First execute Rofi `super + d` and select `rofi-theme-selector`, use the *Nord* theme (or that your taste).
 
 ### ZSH
 To set ZSH for the default shell you need to edit the file: `/etc/passwd` and add the followin command: 
