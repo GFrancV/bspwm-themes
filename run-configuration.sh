@@ -83,6 +83,18 @@ cd $iniRoute
 cp config-files/picom.conf ~/.config/picom
 
 
+#
+#Install oh-my-zsh
+#
+#echo "Installing oh-my-zsh"
+#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#echo "Download powerlevel10k theme for oh-my-zsh."
+#git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+#echo "Now set manually power level 10k as a default theme (for more help read README.MD)."
+
+
 
 
 #Intall the essential tools
