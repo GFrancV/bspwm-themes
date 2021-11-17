@@ -33,4 +33,4 @@ $ sudo laptop_mode start
 - Video with the instructions of the instalation (in Spanish): [View](https://www.youtube.com/watch?v=mHLwfI1nHHY)
 - Pastebin with the commands: [View](https://pastebin.com/EEX1Dsuq)
 - Laptop mode: [View](https://askubuntu.com/questions/180712/how-to-enable-laptop-mode)
-by GFrancV
+- Alacritty config: [View](https://gist.github.com/yoonhoGo/61ea18476a127f5db7b86471ee027876)
