@@ -4,9 +4,6 @@
 usrName=$(whoami)
 iniRoute=$(pwd)
 
-echo "Starting the configuration!"
-
-
 #
 #Install the necessarie tools
 #
