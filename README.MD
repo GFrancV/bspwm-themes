@@ -1,6 +1,7 @@
 # Config Linux
 
-![Preview](/images/preview/Preview-01.png)
+![Preview1](/images/preview/Preview-01.png)
+![Preview2](/images/preview/Preview-02.png)
 
 ## Install fonts
 /usr/local/share/fonts/fonts
