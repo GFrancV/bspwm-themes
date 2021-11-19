@@ -1,22 +1,6 @@
 #!/bin/bash
-#Load the necessary a local variables
-usrName=$(whoami)
-iniRoute=$(pwd)
-
 #Menu options
 options=("Auto install" "Custom configuration" "Install all packets (not recomended)")
-
-basicConfig (){
-    ./scripts/basic-config.sh
-}
-
-customConfig (){
-    echo "2"
-}
-
-allConfig (){
-    echo "3"
-}
 
 #Clean the terminal
 clear
@@ -40,15 +24,16 @@ read -p "Select one option: " op
 
 case $op in
     1)clear
-        basicConfig
+        #execute the script of basiConfig
+        ./scripts/basic-config.sh
         ;;
 
     2)clear
-        customConfig
+        echo "2"
         ;;
 
     3)clear
-        allConfig
+        echo "3"
         ;;
 
     *) echo -e "\e[31m$op is not valid!\e[0m"
