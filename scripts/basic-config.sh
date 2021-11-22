@@ -85,8 +85,8 @@ mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
 
 echo -e "\e[34mCopy sxhkd configs and required scripts.\e[0m"
-cp config-files/sxhkdrc ~/.config/sxhkd/
-cp -r config-files/scripts ~/.config/bspwm/
+cp config-files/window-manager/sxhkdrc ~/.config/sxhkd/
+cp -r config-files/window-manager/scripts ~/.config/bspwm/
 
 echo -e "\e[34mCreating the wallpapers folder.\e[0m"
 mkdir ~/Images
@@ -122,13 +122,13 @@ while true; do
         1)clear
             #Cppying the purple configs
             echo -e "\e[34mCopy bspwm configs.\e[0m"
-            cp config-files/bspwmrc-purple ~/.config/bspwm/bspwmrc
+            cp config-files/window-manager/bspwmrc-purple ~/.config/bspwm/bspwmrc
             ;;
 
         2)clear
             #Cppying the purple configs
             echo -e "\e[34mCopy bspwm configs.\e[0m"
-            cp config-files/bspwmrc-blue ~/.config/bspwm/bspwmrc
+            cp config-files/window-manager/bspwmrc-blue ~/.config/bspwm/bspwmrc
             ;;
 
         *) echo -e "\e[31m$op is not valid!\e[0m"
@@ -141,7 +141,7 @@ done
 #
 #Installing polybar
 #
-echo -e "\e[34mCloning the bolybar repo.\e[0m"
+echo -e "\e[34mCloning the polybar repo.\e[0m"
 git clone --recursive https://github.com/polybar/polybar ~/Downloads/polybar
 cd ~/Downloads/polybar
 mkdir build
@@ -151,9 +151,33 @@ echo -e "\e[34mMaking polybar.\e[0m"
 cmake ..
 make -j$(nproc)
 
-echo -e "\e[34mInstalling picom.\e[0m"
+echo -e "\e[34mInstalling polybar.\e[0m"
 sudo make install
 sudo apt update
+
+
+#Move to dotfile route
+cd $iniRoute
+
+
+#
+#Installing polybar-theme
+#
+echo -e "\e[34mCloning the polybar-themes repo.\e[0m"
+git clone --depth=1 https://github.com/adi1090x/polybar-themes.git ~/Downloads/polybar-themes
+cd ~/Downloads/polybar-themes
+
+echo -e "\e[34Chmod to setup.sh of polybar-themes.\e[0m"
+chmod +x setup.sh
+
+echo -e "\e[34Running polybar-themes.\e[0m"
+echo -e "Note: Install option 1!"
+./setup.sh
+
+echo -e "\e[34Copying custom polybar-themes configurations.\e[0m"
+cd $iniRoute
+rm -R ~/.config/polybar/hack ~/.config/polybar/grayblocks
+cp -r config-files/polybar-themes/* ~/.config/polybar/
 
 
 #Move to dotfile route
@@ -176,6 +200,10 @@ echo -e "\e[34mInstalling picom.\e[0m"
 sudo ninja -C build install
 sudp apt update
 
+echo -e "\e[34mCopying the custom picom configurations.\e[0m"
+cd $iniRoute
+cp config-files/picom.conf ~/.config/picom/
+
 
 #Move to dotfile route
 cd $iniRoute
@@ -186,3 +214,6 @@ cd $iniRoute
 #
 echo -e "\e[34mInstalling rofi.\e[0m"
 sudo apt install rofi
+
+echo -e "\e[34mNOTE: Before the installation of rofi please view README.MD to cchange rofi theme.\e[0m"
+

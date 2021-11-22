@@ -29,7 +29,8 @@ case $op in
         ;;
 
     2)clear
-        echo "2"
+        #execute the script of customConfig
+        ./scripts/custom-config.sh
         ;;
 
     3)clear
