@@ -11,8 +11,6 @@ echo -e "\e[1;33m **************************************** \e[0m"
 echo -e "        \e[1;33mBasic Configuration\e[0m"
 echo -e "\e[1;33m **************************************** \e[0m"
 
-<<COMMENT
-
 #
 #Install the necessarie tools
 #
@@ -67,10 +65,8 @@ sudo apt install bspwm
 sudo apt update
 
 echo
-COMMENT
 
-<<COMMENT
-
+#Move to dotfile route
 cd $iniRoute
 
 #
@@ -92,8 +88,6 @@ mkdir ~/Images/Wallpapers
 echo -e "\e[34mCopyng the wallpapers.\e[0m"
 cp images/wallpapers/* ~/Images/Wallpapers
 
-COMMENT
-
 #
 #Select theme to install
 #
@@ -102,18 +96,8 @@ COMMENT
 #
 #Installing polybar
 #
-echo -e "\e[34mCloning the polybar repo.\e[0m"
-git clone --recursive https://github.com/polybar/polybar ~/Downloads/polybar
-cd ~/Downloads/polybar
-mkdir build
-cd build/
-
-echo -e "\e[34mMaking polybar.\e[0m"
-cmake ..
-make -j$(nproc)
-
 echo -e "\e[34mInstalling polybar.\e[0m"
-sudo make install
+sudo apt install polybar
 sudo apt update
 
 
