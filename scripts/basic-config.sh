@@ -1,35 +1,11 @@
 #!/bin/bash
+#Routes
+iniRoute=$(pwd)
+
 #Color yellow
 #   echo -e "\e[1;33m(Text)\e[0m"
 #Sky blue color
 #   echo -e "\e[34m(Text)\e[0m"
-
-#Purple Theme function
-purpleTheme (){
-    routeBspwm = ~/.config/bspwm/bspwmrc
-
-    #Add wallpaper to bspwm
-    echo -e "\e[34mAdding the wallpaper.\e[0m"
-    cp images/wallpapers/wallpaper-purple.png ~/Images/Wallpapers
-    echo "#Load Wallpaper" > $routeBspwm
-    echo "feh --bg-fill ~/Images/Wallpapers/wallpaper-purple.png" > $routeBspwm
-
-    #Add polybar to bspwmrc
-    echo -e "\e[34mCoping the polybar configs.\e[0m"
-    echo "#Launch Polybar" > $routeBspwm
-    echo "~/.config/polybar/./launch.sh --grayblocks" > $routeBspwm
-    
-
-    #CORREGIR SOLO AGREGAR AL FINAL DE LA LINEA
-    #Add border bspwmrc
-    echo -e "\e[34mCopying colors to bspwm.\e[0m"
-    echo "#Color in the borders when the app is active" > $routeBspwm
-    bspc config focused_border_color "#5e35b2"
-    bspc config normal_border_color "#21262b"
-    bspc config presel_feedback_color "#5e35b2"
-}
-
-
 
 #Themes options
 options=("Purple Theme" "Blue theme")
@@ -79,6 +55,8 @@ COMMENT
 
 <<COMMENT
 
+cd $iniRoute
+
 #
 #Copy the necessary files
 #
@@ -86,9 +64,6 @@ echo -e "\e[34mCreating the config folders.\e[0m"
 mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
 
-echo -e "\e[34mCopy bspwm configs.\e[0m"
-cd $iniRoute
-cp config-files/bspwmrc ~/.config/bspwm/
 echo -e "\e[34mCopy sxhkd configs and required scripts.\e[0m"
 cp config-files/sxhkdrc ~/.config/sxhkd/
 cp -r config-files/scripts ~/.config/bspwm/
@@ -96,6 +71,10 @@ cp -r config-files/scripts ~/.config/bspwm/
 echo -e "\e[34mCreating the wallpapers folder.\e[0m"
 mkdir ~/Images
 mkdir ~/Images/Wallpapers
+
+#Add wallpaper to bspwm
+echo -e "\e[34mCopyng the wallpapers.\e[0m"
+cp images/wallpapers/* ~/Images/Wallpapers
 
 COMMENT
 
@@ -121,11 +100,15 @@ while true; do
 
     case $op in
         1)clear
-            purpleTheme
+            #Cppying the purple configs
+            echo -e "\e[34mCopy bspwm configs.\e[0m"
+            cp config-files/bspwmrc-purple ~/.config/bspwm/bspwmrc
             ;;
 
         2)clear
-            ./scripts/themes/blue-theme.sh
+            #Cppying the purple configs
+            echo -e "\e[34mCopy bspwm configs.\e[0m"
+            cp config-files/bspwmrc-blue ~/.config/bspwm/bspwmrc
             ;;
 
         *) echo -e "\e[31m$op is not valid!\e[0m"
@@ -134,3 +117,4 @@ while true; do
 
     [[ $op -gt 2 || $op -lt 1 ]] || break
 done
+
