@@ -1,7 +1,12 @@
 # Config Linux
 
-![Preview1](/images/preview/Preview-01.png)
-![Preview2](/images/preview/Preview-02.png)
+
+## Available themes
+### Blue theme
+![Preview1](/images/preview/preview-blue.png)
+
+### Purple theme
+![Preview2](/images/preview/preview-purple.png)
 
 ## Install fonts
 /usr/local/share/fonts/fonts

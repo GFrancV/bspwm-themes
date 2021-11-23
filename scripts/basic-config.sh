@@ -160,5 +160,5 @@ cd $iniRoute
 echo -e "\e[34mInstalling rofi.\e[0m"
 sudo apt install rofi
 
-echo -e "\e[34mNOTE: Before the installation of rofi please view README.MD to cchange rofi theme.\e[0m"
+echo -e "\e[34mNOTE: Before the installation of rofi please view README.MD to change rofi theme.\e[0m"
 
