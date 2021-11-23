@@ -1,6 +1,11 @@
 # Config Linux
 
+# Table of contents
+- [After the instalation](#after-the-instalation)
+- [Before the instalation](#before-the-instalation)
+- [References](#references)
 
+# After the instalation
 ## Available themes
 ### Blue theme
 ![Preview1](/images/preview/preview-blue.png)
@@ -12,7 +17,7 @@
 /usr/local/share/fonts/fonts
 fc-cache -v
 
-## Before the instalation
+# Before the instalation
 ### Rofi
 To personalize the apparience of rofi we need do this manualy.  
 First execute Rofi `super + d` and select `rofi-theme-selector`, use the *Nord* theme (or that your taste).
@@ -35,7 +40,7 @@ Then start the program with this command:
 $ sudo laptop_mode start
 ```
 
-## References
+# References
 - Video with the instructions of the instalation (in Spanish): [View](https://www.youtube.com/watch?v=mHLwfI1nHHY)
 - Pastebin with the commands: [View](https://pastebin.com/EEX1Dsuq)
 - Laptop mode: [View](https://askubuntu.com/questions/180712/how-to-enable-laptop-mode)
