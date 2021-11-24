@@ -34,7 +34,8 @@ while true; do
     case $op in
         1)clear
             ./scripts/theme-selector.sh
-            echo -e "\e[1;33mNOTE: Please restart the windows manager to see the changes.\e[0m"
+            #echo -e "\e[1;33mNOTE: Please restart the windows manager to see the changes.\e[0m"
+            bspc wm -r
             ;;
 
         *) echo -e "\e[31m$op is not valid!\e[0m"
