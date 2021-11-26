@@ -2,34 +2,45 @@
 
 # Table of contents
 - [After the instalation](#after-the-instalation)
+    - [Instalation options](#instalation-options)
 - [Before the instalation](#before-the-instalation)
+    - [Rofi](#rofi)
+    - [ZSH](#zsh)
+- [Available themes](#available-themes)
 - [References](#references)
 
 # After the instalation
-## Available themes
-### Blue theme
-![Preview1](/images/preview/preview-blue.png)
+## Instalation options
+For install the configuration you have a menu with 3 options, then below we will describe each of the options.
+### 1. Auto install:
+In this option will be installed basic tools for the programs, the most important options are:
+- [bspwm](https://github.com/baskerville/bspwm) and [sxhkd](https://github.com/baskerville/sxhkd).
+- [feh (for set wallpaper)](https://github.com/derf/feh).
+- [polybar](https://github.com/polybar/polybar).
+- [picom (for the transparency)](https://github.com/yshui/picom).
 
-### Purple theme
-![Preview2](/images/preview/preview-purple.png)
+we will have to select what theme are we going to want to install
+### 2. Custom configuration
+### 3. Install all packets
 
 ## Install fonts
 /usr/local/share/fonts/fonts
 fc-cache -v
 
 # Before the instalation
-### Rofi
+## Rofi
 To personalize the apparience of rofi we need do this manualy.  
-First execute Rofi `super + d` and select `rofi-theme-selector`, use the *Nord* theme (or that your taste).
+First execute Rofi `super + d` and select `rofi-theme-selector`, use the *Nord* theme (or that your taste).  
+*INSERT IMG*
 
-### ZSH
+## ZSH
 To set ZSH for the default shell you need to edit the file: `/etc/passwd` and add the followin command: 
 
 ```bash
 {username}:x:1634231:100:{Your Name}:/home/{username}:/bin/zsh
 ```
 
-### Enable laptop mode
+## Enable laptop mode
 This mode is for activate the energy mode saving in the laptop and optimze its performance. Need to edit the values of the file: `/etc/laptop-mode/laptop.mode.conf` whit this:
 ```
 ENABLE_LAPTOP_MODE_ON_AC=1
@@ -39,6 +50,13 @@ Then start the program with this command:
 ```
 $ sudo laptop_mode start
 ```
+# Available themes
+## Blue theme
+![Preview1](/images/preview/preview-blue.png)
+
+## Purple theme
+![Preview2](/images/preview/preview-purple.png)
+
 
 # References
 - Video with the instructions of the instalation (in Spanish): [View](https://www.youtube.com/watch?v=mHLwfI1nHHY)
