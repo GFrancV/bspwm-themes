@@ -37,6 +37,17 @@ sudo apt update
 echo
 
 #
+#Install kitty and configurations
+#
+echo -e "\e[34mINstalling kitty. \e[0m"
+sudo apt install kitty
+
+echo -e "\e[34mCreating the config folder to kitty.\e[0m"
+mkdir ~/.config/kitty
+echo -e "\e[34mCopy kitty configs.\e[0m"
+cp config-files/terminals/kitty.conf ~/.config/kitty/
+
+#
 #Install bspwm and sxhkd
 #
 echo -e "\e[34mCreating the arrival folder (Downloads). \e[0m"

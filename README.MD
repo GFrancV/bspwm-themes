@@ -13,13 +13,14 @@
 ## Instalation options
 For install the configuration you have a menu with 3 options, then below we will describe each of the options.
 ### 1. Auto install:
-In this option will be installed basic tools for the programs, the most important options are:
+In this option will be installed basic apps, the most important options are:
+- [kitty terminal](https://github.com/kovidgoyal/kitty).
 - [bspwm](https://github.com/baskerville/bspwm) and [sxhkd](https://github.com/baskerville/sxhkd).
 - [feh (for set wallpaper)](https://github.com/derf/feh).
 - [polybar](https://github.com/polybar/polybar).
 - [picom (for the transparency)](https://github.com/yshui/picom).
 
-we will have to select what theme are we going to want to install
+By default the emulator terminal that we are going to use is [Kitty](https://github.com/kovidgoyal/kitty) (All the config files are to kitty terminal) despite that the config-files folder has a configuration file to use alacritty. 
 ### 2. Custom configuration
 ### 3. Install all packets
 
