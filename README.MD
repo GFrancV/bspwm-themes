@@ -18,10 +18,13 @@ In this option will be installed basic apps, the most important options are:
 - [bspwm](https://github.com/baskerville/bspwm) and [sxhkd](https://github.com/baskerville/sxhkd).
 - [feh (for set wallpaper)](https://github.com/derf/feh).
 - [polybar](https://github.com/polybar/polybar).
-- [picom (for the transparency)](https://github.com/yshui/picom).
+- [picom (for the transparency)](https://github.com/yshui/picom).  
 
+Before the instalation of the necessary programs we need to choose which theme we want to install (purple or blue), for this you can view the section [Available themes](#available-themes).  
 By default the emulator terminal that we are going to use is [Kitty](https://github.com/kovidgoyal/kitty) (All the config files are to kitty terminal) despite that the config-files folder has a configuration file to use alacritty. 
 ### 2. Custom configuration
+In custom configuration we have a submenu with multiple options. Then we will describe each of the options:
+1. **Theme selector._** With this option we can change the theme at any time even after the installation has been completed. 
 ### 3. Install all packets
 
 ## Install fonts
