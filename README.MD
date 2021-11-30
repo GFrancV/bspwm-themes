@@ -18,10 +18,11 @@ In this option will be installed basic apps, the most important options are:
 - [bspwm](https://github.com/baskerville/bspwm) and [sxhkd](https://github.com/baskerville/sxhkd).
 - [feh (for set wallpaper)](https://github.com/derf/feh).
 - [polybar](https://github.com/polybar/polybar).
-- [picom (for the transparency)](https://github.com/yshui/picom).  
+- [picom (for the transparency)](https://github.com/yshui/picom).
+- [ranger](https://github.com/ranger/ranger).
 
 Before the instalation of the necessary programs we need to choose which theme we want to install (purple or blue), for this you can view the section [Available themes](#available-themes).  
-By default the emulator terminal that we are going to use is [Kitty](https://github.com/kovidgoyal/kitty) (All the config files are to kitty terminal) despite that the config-files folder has a configuration file to use alacritty. 
+By default the emulator terminal that we are going to use is [Kitty](https://github.com/kovidgoyal/kitty) (All the config files are to kitty terminal) despite that the config-files folder has a configuration file to use alacritty. We also have ranger as default file manager from the command line, to learn how to use ranger [view this page](https://www.digitalocean.com/community/tutorials/installing-and-using-ranger-a-terminal-file-manager-on-a-ubuntu-vps). 
 ### 2. Custom configuration
 In custom configuration we have a submenu with multiple options. Then we will describe each of the options:
 1. **Theme selector._** With this option we can change the theme at any time even after the installation has been completed. 

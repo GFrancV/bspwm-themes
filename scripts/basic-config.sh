@@ -47,6 +47,18 @@ echo -e "\e[34mCopy kitty configs.\e[0m"
 cp -r $configFilesRoute/kitty ~/.config/
 
 #
+#Install ranger and configurations
+#
+echo -e "\e[34mINstalling ranger. \e[0m"
+sudo apt install ranger
+echo -e "\e[34mCreating the basics configs for ranger.\e[0m"
+ranger --copy-config=all
+echo -e "\e[34mInstalling devicons.\e[0m"
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+cp $configFilesRoute/ranger/rc.conf ~/.config/ranger/
+
+
+#
 #Install bspwm and sxhkd
 #
 echo -e "\e[34mCreating the arrival folder (Downloads). \e[0m"
