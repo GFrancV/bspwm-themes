@@ -1,6 +1,7 @@
 #!/bin/bash
 #Routes
 iniRoute=$(pwd)
+configFilesRoute=config-files/dotfiles
 
 #Color yellow
 #   echo -e "\e[1;33m(Text)\e[0m"
@@ -42,10 +43,8 @@ echo
 echo -e "\e[34mINstalling kitty. \e[0m"
 sudo apt install kitty
 
-echo -e "\e[34mCreating the config folder to kitty.\e[0m"
-mkdir ~/.config/kitty
 echo -e "\e[34mCopy kitty configs.\e[0m"
-cp config-files/terminals/kitty.conf ~/.config/kitty/
+cp -r $configFilesRoute/kitty ~/.config/
 
 #
 #Install bspwm and sxhkd
@@ -83,13 +82,9 @@ cd $iniRoute
 #
 #Copy the necessary files
 #
-echo -e "\e[34mCreating the config folders.\e[0m"
-mkdir ~/.config/bspwm
-mkdir ~/.config/sxhkd
-
 echo -e "\e[34mCopy sxhkd configs and required scripts.\e[0m"
-cp config-files/window-manager/sxhkdrc ~/.config/sxhkd/
-cp -r config-files/window-manager/scripts ~/.config/bspwm/
+cp -r $configFilesRoute/sxhkd ~/.config/
+cp -r $configFilesRoute/bspwm ~/.config/
 
 echo -e "\e[34mCreating the wallpapers folder.\e[0m"
 mkdir ~/Images
@@ -133,7 +128,7 @@ echo -e "Note: Install option 1!"
 echo -e "\e[34Copying custom polybar-themes configurations.\e[0m"
 cd $iniRoute
 rm -R ~/.config/polybar/hack ~/.config/polybar/grayblocks
-cp -r config-files/polybar-themes/* ~/.config/polybar/
+cp -r $configFilesRoute/polybar/* ~/.config/polybar/
 
 
 #Move to dotfile route
@@ -158,12 +153,11 @@ sudp apt update
 
 echo -e "\e[34mCopying the custom picom configurations.\e[0m"
 cd $iniRoute
-cp config-files/picom.conf ~/.config/picom/
+cp $configFilesRoute/picom ~/.config/
 
 
 #Move to dotfile route
 cd $iniRoute
-
 
 #
 #Installing rofi
