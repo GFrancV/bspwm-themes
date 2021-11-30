@@ -122,7 +122,6 @@ sudo apt update
 #Move to dotfile route
 cd $iniRoute
 
-
 #
 #Installing polybar-theme
 #
