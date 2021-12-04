@@ -109,6 +109,7 @@ cp images/wallpapers/* ~/Images/Wallpapers
 #
 #Select theme to install
 #
+clear
 ./scripts/theme-selector.sh
 
 #
