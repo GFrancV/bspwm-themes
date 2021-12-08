@@ -38,10 +38,39 @@ sudo apt update
 echo
 
 #
+#Install NERD FONT HACK font
+#
+echo -e "\e[34mInstalling Nerd Fonts.\e[0m"
+cd ~/Downloads
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+
+echo -e "\e[34mUnziping.\e[0m"
+unzip Hack.zip -d Hack
+cd Hack
+sudo mv * /usr/share/fonts
+
+echo -e "\e[34minstalling fonts.\e[0m"
+fc-cache -f -v
+
+cd $iniRoute
+
+#
 #Install kitty and configurations
 #
-echo -e "\e[34mINstalling kitty. \e[0m"
+echo -e "\e[34mInstalling kitty.\e[0m"
 sudo apt install kitty
+echo -e "\e[34mInstalling zsh.\e[0m"
+sudo apt install zsh
+
+echo -e "\e[34mInstalling oh-my-zsh.\e[0m"
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+echo -e "\e[34mCloning powerlevel10k repo.\e[0m"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+echo -e "\e[34mCopy p10k configs.\e[0m"
+cp $configFilesRoute/.p10k.zsh
+cp $configFilesRoute/.zshrc
 
 echo -e "\e[34mCopy kitty configs.\e[0m"
 cp -r $configFilesRoute/kitty ~/.config/
