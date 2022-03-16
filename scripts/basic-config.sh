@@ -17,22 +17,22 @@ echo -e "\e[1;33m **************************************** \e[0m"
 #
 echo -e "\e[34mInstalling the necessarie tools!\e[0m"
 #Necessary tool for bspwm
-sudo apt install build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev
+sudo apt install build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y
 sudo apt update
 
 #Need to load walpapers
 echo -e "\e[34mInstalling the necessarie tools to load wallpapers!\e[0m"
-sudo apt install feh
+sudo apt install feh -y
 sudo apt update
 
 #Need to polybar
 echo -e "\e[34mInstalling the necessarie tools to polybar!\e[0m"
-sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev
+sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y
 sudo apt update
 
 #Need to picom
 echo -e "\e[34mInstalling the necessarie tools to picom!\e[0m"
-sudo apt install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev
+sudo apt install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y
 sudo apt update
 
 echo
@@ -58,9 +58,9 @@ cd $iniRoute
 #Install kitty and configurations
 #
 echo -e "\e[34mInstalling kitty.\e[0m"
-sudo apt install kitty
+sudo apt install kitty -y
 echo -e "\e[34mInstalling zsh.\e[0m"
-sudo apt install zsh
+sudo apt install zsh -y
 
 echo -e "\e[34mInstalling oh-my-zsh.\e[0m"
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -79,7 +79,7 @@ cp -r $configFilesRoute/kitty ~/.config/
 #Install ranger and configurations
 #
 echo -e "\e[34mINstalling ranger. \e[0m"
-sudo apt install ranger
+sudo apt install ranger -y
 echo -e "\e[34mCreating the basics configs for ranger.\e[0m"
 ranger --copy-config=all
 echo -e "\e[34mInstalling devicons.\e[0m"
@@ -112,7 +112,7 @@ make
 sudo apt update
 
 echo -e "\e[34mInstalling bspwm.\e[0m"
-sudo apt install bspwm
+sudo apt install bspwm -y
 sudo apt update
 
 echo
@@ -145,7 +145,7 @@ clear
 #Installing polybar
 #
 echo -e "\e[34mInstalling polybar.\e[0m"
-sudo apt install polybar
+sudo apt install polybar -y
 sudo apt update
 
 
@@ -204,7 +204,7 @@ cd $iniRoute
 #Installing rofi
 #
 echo -e "\e[34mInstalling rofi.\e[0m"
-sudo apt install rofi
+sudo apt install rofi -y
 
 echo -e "\e[34mNOTE: Before the installation of rofi please view README.MD to change rofi theme.\e[0m"
 
