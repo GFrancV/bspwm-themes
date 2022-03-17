@@ -69,8 +69,8 @@ echo -e "\e[34mCloning powerlevel10k repo.\e[0m"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 echo -e "\e[34mCopy p10k configs.\e[0m"
-cp $configFilesRoute/.p10k.zsh
-cp $configFilesRoute/.zshrc
+cp $configFilesRoute/.p10k.zsh ~/ 
+cp $configFilesRoute/.zshrc ~/
 
 echo -e "\e[34mCopy kitty configs.\e[0m"
 cp -r $configFilesRoute/kitty ~/.config/
