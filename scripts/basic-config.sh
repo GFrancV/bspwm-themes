@@ -202,3 +202,5 @@ sudp apt update
 echo -e "\e[34mCopying the custom picom configurations.\e[0m"
 cd $iniRoute
 cp -r $configFilesRoute/picom ~/.config/
+
+
