@@ -27,12 +27,18 @@ while true; do
             #Cppying the purple configs
             echo -e "\e[34mCopy bspwm configs.\e[0m"
             cp config-files/window-manager/bspwmrc-purple ~/.config/bspwm/bspwmrc
+            
+            echo -e "\e[34mInstalling rofi themes.\e[0m"
+            echo @import "/home/vilach/.config/rofi/themes/rounded-purple-dark.rasi" > ~/.config/rofi/config.rasi
             ;;
 
         2)clear
             #Cppying the purple configs
             echo -e "\e[34mCopy bspwm configs.\e[0m"
             cp config-files/window-manager/bspwmrc-blue ~/.config/bspwm/bspwmrc
+
+            echo -e "\e[34mInstalling rofi themes.\e[0m"
+            echo @import "/home/vilach/.config/rofi/themes/rounded-blue-dark.rasi" > ~/.config/rofi/config.rasi
             ;;
 
         *) echo -e "\e[31m$op is not valid!\e[0m"

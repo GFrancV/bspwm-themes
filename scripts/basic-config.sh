@@ -135,6 +135,19 @@ mkdir ~/Images/Wallpapers
 echo -e "\e[34mCopyng the wallpapers.\e[0m"
 cp images/wallpapers/* ~/Images/Wallpapers
 
+#Move to dotfile route
+cd $iniRoute
+
+#
+#Installing rofi
+#
+echo -e "\e[34mInstalling rofi.\e[0m"
+sudo apt install rofi -y
+
+echo -e "\e[34mCopyng Rofi configuration.\e[0m"
+
+cp -r config-files/dotfiles/rofi ~/.config/
+
 #
 #Select theme to install
 #
@@ -195,16 +208,3 @@ sudp apt update
 echo -e "\e[34mCopying the custom picom configurations.\e[0m"
 cd $iniRoute
 cp -r $configFilesRoute/picom ~/.config/
-
-
-#Move to dotfile route
-cd $iniRoute
-
-#
-#Installing rofi
-#
-echo -e "\e[34mInstalling rofi.\e[0m"
-sudo apt install rofi -y
-
-echo -e "\e[34mNOTE: Before the installation of rofi please view README.MD to change rofi theme.\e[0m"
-
