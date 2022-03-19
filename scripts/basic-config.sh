@@ -2,6 +2,7 @@
 #Routes
 iniRoute=$(pwd)
 configFilesRoute=config-files/dotfiles
+configRoute=~/.config
 
 #Color yellow
 #   echo -e "\e[1;33m(Text)\e[0m"
@@ -168,21 +169,14 @@ cd $iniRoute
 #
 #Installing polybar-theme
 #
-echo -e "\e[34mCloning the polybar-themes repo.\e[0m"
-git clone --depth=1 https://github.com/adi1090x/polybar-themes.git ~/Downloads/polybar-themes
-cd ~/Downloads/polybar-themes
+echo -e "\e[34Creating backup of your polybar configs.\e[0m"
 
-echo -e "\e[34Chmod to setup.sh of polybar-themes.\e[0m"
-chmod +x setup.sh
-
-echo -e "\e[34Running polybar-themes.\e[0m"
-echo -e "Note: Install option 1!"
-./setup.sh
+mv $configRoute/polybar $configRoute/polybar.old
 
 echo -e "\e[34Copying custom polybar-themes configurations.\e[0m"
+
 cd $iniRoute
-rm -R ~/.config/polybar/hack ~/.config/polybar/grayblocks
-cp -r $configFilesRoute/polybar/* ~/.config/polybar/
+{ mkdir $configRoute/polybar;  cp -rf $configFilesRoute/polybar $configRoute}
 
 
 #Move to dotfile route
