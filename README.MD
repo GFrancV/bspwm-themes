@@ -1,82 +1,95 @@
-# Config Linux
+# Dotfiles
 
-# Table of contents
+This repo contains a simple scripts to install and configure a very cool desktop enviroment without need to know how to create or configure shell scripts.
 
--   [After the instalation](#after-the-instalation)
-    -   [Instalation options](#instalation-options)
--   [Before the instalation](#before-the-instalation)
-    -   [Rofi](#rofi)
-    -   [ZSH](#zsh)
--   [Available themes](#available-themes)
--   [References](#references)
+## Used programs
 
-# After the instalation
+This program uses different apps and repositories to maximize the user experience.
 
-## Instalation options
+- [`bspwm`](https://github.com/baskerville/bspwm) and [`sxhkd`](https://github.com/baskerville/sxhkd): Like our windows manager.
+- [`kitty`](https://github.com/kovidgoyal/kitty): Like our terminal emulator.
+- [`feh`](https://github.com/derf/feh): To set a wallpaper.
+- [`polybar`](https://github.com/polybar/polybar): Like our status bar.
+- [`picom`](https://github.com/yshui/picom): To set transparency and personlity to bspwm.
+- [`ranger`](https://github.com/ranger/ranger): As our file manager in terminal.
 
-For install the configuration you have a menu with 2 options, then below we will describe each of the options.
+## Fonts
 
-### 1. Auto install:
+- Isovaka Nerd Font
+- Hack Nerd Font
+- Feather font.
 
-With this option will be installed basic apps, the most important are:
+# Instalation
 
--   [kitty](https://github.com/kovidgoyal/kitty).
--   [bspwm](https://github.com/baskerville/bspwm) and [sxhkd](https://github.com/baskerville/sxhkd).
--   [feh](https://github.com/derf/feh).
--   [polybar](https://github.com/polybar/polybar).
--   [picom](https://github.com/yshui/picom).
--   [ranger](https://github.com/ranger/ranger).
+> Note: To install this dektop enviroment no need to install any dependencies or some other programs, this script will do everything for you, just relax.
+
+Follow the steps bellow to install this desktop enviroment on your system.
+
+### 1. Clone this repository
+
+```bash
+git clone https://github.com/GFrancV/dotfiles
+
+```
+
+### 2. Change to clone repository and execute the `./setup.sh`
+
+```bash
+cd dotfiles
+./setup.sh
+```
+
+### 3. Select an option
+
+```text
+****************************************
+      Starting the  Configuration
+****************************************
+Installation wizard. For more information read README.MD file.
+Select a option configuration for your Linux.
+1. Basic instalattion
+2. Theme selector
+Select one option:
+```
+
+1. With option 1 the installation will start, all the necessary programs, their settings and all their dependencies will be installed.
+
+2. With option 2 you can switch between themes at any time even after the installation has been completed.
+   > Note: For use the option 2 you must have installed and configured all the programs before.
+
+### 4. Select the theme to install
+
+```text
+****************************************
+      Select theme to install
+****************************************
+Theme selector
+For more information about themes you can view the previews in the README.MD files or on preview folder.
+Which theme you want to install?
+1. Purple Theme
+2. Blue Theme
+Select one option:
+```
 
 Before the instalation of the necessary programs we need to choose which theme we want to install (purple or blue), for this you can view the section [Available themes](#available-themes).
 
+### 5. That's all, now you have these themes installed on your PC.
 
-By default the emulator terminal that we are going to use is [Kitty](https://github.com/kovidgoyal/kitty) (All the config files are to kitty terminal) despite that the config-files folder has a configuration file to use [Alacritty](/config-files/dotfiles/alacritty/). 
+# Important notes
 
-We also have ranger as default file manager from the command line, to learn how to use ranger [view this page](https://www.digitalocean.com/community/tutorials/installing-and-using-ranger-a-terminal-file-manager-on-a-ubuntu-vps).
+## Terminal emulator
 
-### 2. Custom configuration
+By default the emulator terminal used in this desktop enviroment is [Kitty](https://github.com/kovidgoyal/kitty) (All the config files are to kitty terminal) despite that the config-files folder has a configuration file to use [Alacritty](/config-files/dotfiles/alacritty/).
 
-In custom configuration we have a submenu with multiple options. Then we will describe each of the options:
+## Installation for Debian
 
-1. **Instal for Debian.\_** This option add new commands for intall sudo and aditional commands to run this config in Debian +11.  
-   **NOTE:** To enable sudo commands in Debian add this command in `/etc/sudoers`:
+First to install this theme in Debian we need to install `sudo`, to enable sudo commands on Debian+11 add this command in `/etc/sudoers`:
 
-```
+```bash
 {USERNAME} ALL=(ALL:ALL) ALL
 ```
 
-2. **Theme selector.\_** With this option we can change the theme at any time even after the installation has been completed.
-
-# Before the instalation
-
-## Rofi
-
-To personalize the apparience of rofi we need do this manualy.  
-First execute Rofi `super + d` and select `rofi-theme-selector`, use the _Nord_ theme (or that your taste).  
-_INSERT IMG_
-
-## ZSH
-
-To set ZSH for the default shell you need to edit the file: `/etc/passwd` and add the followin command:
-
-```bash
-{username}:x:1634231:100:{Your Name}:/home/{username}:/bin/zsh
-```
-
-## Enable laptop mode
-
-This mode is for activate the energy mode saving in the laptop and optimze its performance. Need to edit the values of the file: `/etc/laptop-mode/laptop.mode.conf` whit this:
-
-```
-ENABLE_LAPTOP_MODE_ON_AC=1
-ENABLE_LAPTOP_MODE_ON_BATTERY = 1
-```
-
-Then start the program with this command:
-
-```
-$ sudo laptop_mode start
-```
+> Note: Replace the section 'USERNAME' with your userneme.
 
 # Available themes
 
@@ -88,10 +101,20 @@ $ sudo laptop_mode start
 
 ![Preview2](/images/preview/preview-purple.png)
 
+# External repos
+
+For the creation of this script external repositories were used to improve the appearance of the final result.
+Those repositories are:
+
+- [rofi-themes-collection](https://github.com/lr-tech/rofi-themes-collection)
+- [polybar-themes](https://github.com/adi1090x/polybar-themes)
+
+I recommend visiting these repos to see their documentation and have more unique customization.
+
 # References
 
--   Video with the instructions of the instalation (in Spanish): [View](https://www.youtube.com/watch?v=mHLwfI1nHHY)
--   Pastebin with the commands: [View](https://pastebin.com/EEX1Dsuq)
--   Laptop mode: [View](https://askubuntu.com/questions/180712/how-to-enable-laptop-mode)
--   Alacritty config: [View](https://gist.github.com/yoonhoGo/61ea18476a127f5db7b86471ee027876)
--   Debian + Bspwm (in Spanish): [View](https://www.youtube.com/watch?v=823RcAIitjk)
+- Video with the instructions of the instalation (in Spanish): [View](https://www.youtube.com/watch?v=mHLwfI1nHHY)
+- Pastebin with the commands: [View](https://pastebin.com/EEX1Dsuq)
+- Laptop mode: [View](https://askubuntu.com/questions/180712/how-to-enable-laptop-mode)
+- Alacritty config: [View](https://gist.github.com/yoonhoGo/61ea18476a127f5db7b86471ee027876)
+- Debian + Bspwm (in Spanish): [View](https://www.youtube.com/watch?v=823RcAIitjk)

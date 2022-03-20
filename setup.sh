@@ -1,6 +1,6 @@
 #!/bin/bash
 #Menu options
-options=("Auto install" "Custom configuration")
+options=("Basic installation" "Theme selector")
 
 #Clean the terminal
 clear
