@@ -1,6 +1,6 @@
 #!/bin/bash
 #Menu options
-options=("Auto install" "Custom configuration" "Install all packets (not recomended)")
+options=("Auto install" "Custom configuration")
 
 #Clean the terminal
 clear
@@ -32,11 +32,6 @@ case $op in
         #execute the script of customConfig
         ./scripts/custom-config.sh
         ;;
-
-    3)clear
-        echo "3"
-        ;;
-
     *) echo -e "\e[31m$op is not valid!\e[0m"
         ;;
 esac
