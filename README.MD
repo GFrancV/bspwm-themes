@@ -1,5 +1,3 @@
-# Dotfiles
-
 <p align="center">
   <img src="images/logo.jpg">
 </p>
