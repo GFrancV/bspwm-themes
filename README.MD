@@ -1,5 +1,9 @@
 # Dotfiles
 
+<p align="center">
+  <img src="images/logo.jpg">
+</p>
+
 This repo contains a simple scripts to install and configure a very cool desktop enviroment without need to know how to create or configure shell scripts.
 
 ## Used programs
