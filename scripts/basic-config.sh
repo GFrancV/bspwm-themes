@@ -41,14 +41,12 @@ echo
 #
 #Install NERD FONT HACK font
 #
-echo -e "\e[34mInstalling Nerd Fonts.\e[0m"
-cd ~/Downloads
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+echo -e "\e[34mInstalling necesary Fonts.\e[0m"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip -P $iniRoute/fonts
 
 echo -e "\e[34mUnziping.\e[0m"
-unzip Hack.zip -d Hack
-cd Hack
-sudo mv * /usr/share/fonts
+unzip $iniRoute/fonts/Hack.zip -d $iniRoute/fonts/Hack
+sudo cp $iniRoute/fonts/* /usr/share/fonts
 
 echo -e "\e[34minstalling fonts.\e[0m"
 fc-cache -f -v
