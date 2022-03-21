@@ -1,6 +1,6 @@
 #!/bin/bash
 #Menu options
-options=("Basic installation" "Theme selector")
+options=("Basic installation" "Install configuration" "Theme selector")
 
 #Clean the terminal
 clear
@@ -30,6 +30,11 @@ case $op in
 
     2)clear
         #execute the script of customConfig
+        echo xd
+        ;;
+
+    3)clear
+        #execute the script of themeSelector
         ./scripts/custom-config.sh
         ;;
     *) echo -e "\e[31m$op is not valid!\e[0m"
