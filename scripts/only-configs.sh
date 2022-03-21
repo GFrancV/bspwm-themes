@@ -8,11 +8,10 @@ iniRoute=$(pwd)
 #   echo -e "\e[34m(Text)\e[0m"
 
 #Themes options
-options=("Intall sudo" "Install for Debaian" "Theme Selector")
-
+options=("All configs" "Selected configurations")
 
 echo -e "\e[1;33m **************************************** \e[0m"
-echo -e "        \e[1;33mCustom Configuration\e[0m"
+echo -e "        \e[1;33mInstall only configurations\e[0m"
 echo -e "\e[1;33m **************************************** \e[0m"
 
 #Title menu
@@ -33,20 +32,11 @@ while true; do
 
     case $op in
         1)clear
-            ./scripts/custom-config/debian-config.sh
-            ./scripts/basic-config.sh
-            cp ./config-file/.xinitrc ~/
-            startx
+            ./scripts/only-config/all-configurations.sh
             ;;
 
         2)clear
             ./scripts/custom-config/sudo-config.sh
-            ;;
-
-        3)clear
-            ./scripts/theme-selector.sh
-            #echo -e "\e[1;33mNOTE: Please restart the windows manager to see the changes.\e[0m"
-            bspc wm -r
             ;;
 
         *) echo -e "\e[31m$op is not valid!\e[0m"

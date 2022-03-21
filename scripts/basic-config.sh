@@ -167,9 +167,7 @@ cd $iniRoute
 #
 #Installing polybar-theme
 #
-echo -e "\e[34Creating backup of your polybar configs.\e[0m"
 
-mv $configRoute/polybar $configRoute/polybar.old
 
 echo -e "\e[34Copying custom polybar-themes configurations.\e[0m"
 

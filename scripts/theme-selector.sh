@@ -1,4 +1,7 @@
 #!/bin/bash
+#Rotue
+iniRoute=$(pwd)
+
 #Themes options
 options=("Purple Theme" "Blue theme")
 
@@ -23,22 +26,22 @@ while true; do
     read -p "Select one option: " op
 
     case $op in
-        1)clear
+        1)
             #Cppying the purple configs
-            echo -e "\e[34mCopy bspwm configs.\e[0m"
+            echo -e "\e[34m[✓] Copy bspwm configs.\e[0m"
             cp config-files/window-manager/bspwmrc-purple ~/.config/bspwm/bspwmrc
             
-            echo -e "\e[34mInstalling rofi themes.\e[0m"
-            echo @import "/home/vilach/.config/rofi/themes/rounded-purple-dark.rasi" > ~/.config/rofi/config.rasi
+            echo -e "\e[34m[✓] Installing rofi themes.\e[0m"
+            echo '@import "~/.config/rofi/themes/rounded-purple-dark.rasi"' > ~/.config/rofi/config.rasi
             ;;
 
-        2)clear
+        2)
             #Cppying the purple configs
-            echo -e "\e[34mCopy bspwm configs.\e[0m"
+            echo -e "\e[34m[✓] Copy bspwm configs.\e[0m"
             cp config-files/window-manager/bspwmrc-blue ~/.config/bspwm/bspwmrc
 
-            echo -e "\e[34mInstalling rofi themes.\e[0m"
-            echo @import "/home/vilach/.config/rofi/themes/rounded-blue-dark.rasi" > ~/.config/rofi/config.rasi
+            echo -e "\e[34m[✓] Installing rofi themes.\e[0m"
+            echo '@import "~/.config/rofi/themes/rounded-blue-dark.rasi"' > ~/.config/rofi/config.rasi
             ;;
 
         *) echo -e "\e[31m$op is not valid!\e[0m"
