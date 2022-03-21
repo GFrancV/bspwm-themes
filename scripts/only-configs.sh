@@ -8,7 +8,7 @@ iniRoute=$(pwd)
 #   echo -e "\e[34m(Text)\e[0m"
 
 #Themes options
-options=("All configs" "Selected configurations")
+options=("All configs")
 
 echo -e "\e[1;33m **************************************** \e[0m"
 echo -e "        \e[1;33mInstall only configurations\e[0m"
@@ -36,7 +36,7 @@ while true; do
             ;;
 
         2)clear
-            ./scripts/custom-config/sudo-config.sh
+            # ./scripts/only-config/selected-configs.sh
             ;;
 
         *) echo -e "\e[31m$op is not valid!\e[0m"
